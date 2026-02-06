@@ -1,0 +1,12 @@
+:root{
+--brand-primary-one:#003318;
+--brand-primary-two:#004822;
+--brand-secondary-one:#F0C300;
+
+/* Text colors */
+--gray-900:#090909;
+--text-primary: var(--gray-900);
+--text-secondary: var(--gray-600);
+--text-muted: var(--gray-500);
+--text-inverse: var(--white);
+}
