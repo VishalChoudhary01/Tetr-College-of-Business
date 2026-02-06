@@ -24,14 +24,14 @@
 }
 
 .process-header {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12rem;
+  gap: 2rem;
 }
 
 .process-title {
@@ -139,7 +139,7 @@
 
 /* Timeline Container */
 .process-timeline {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -197,17 +197,17 @@
 }
 
 .timeline-marker:nth-child(1) {
-  left: 18%;
+  left: 15%;
   background: var(--brand-accent-primary);
 }
 
 .timeline-marker:nth-child(2) {
-  left: 50%;
+  left: 49%;
   background: var(--brand-accent-secondary);
 }
 
 .timeline-marker:nth-child(3) {
-  left: 82%;
+  left: 84%;
   background: #a855f7;
 }
 
@@ -215,7 +215,7 @@
 .process-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 50px;
   max-width: 1250px;
   margin: 0 auto;
   position: relative;
