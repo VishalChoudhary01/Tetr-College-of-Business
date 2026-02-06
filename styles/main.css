@@ -4,12 +4,15 @@
 
 /* @import './base//variables.css'; */
 @import "./layout/navbar.css";
-@import './sections/hero.css';
+@import "./sections/hero.css";
+@import "./sections/stages.css";
 
 :root {
   --brand-primary-one: #003318;
   --brand-primary-two: #009c50;
   --brand-secondary-one: #f0c300;
+  --brand-accent-primary: #f8769a;
+  --brand-accent-secondary: #4cc9e9;
 
   /* Text colors */
   --gray-900: #090909;

@@ -1,0 +1,167 @@
+.stages-section {
+  padding-bottom: 2rem;
+}
+
+.stages-items-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stages-items-container .square {
+  width: 50px;
+  height: 50px;
+  background: var(--brand-primary-one);
+}
+.stages-items-container .rectangle {
+  width: 100px;
+  height: 50px;
+  background: var(--brand-primary-one);
+}
+.stages-section .stages-contents {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* LEFT CONTENT */
+.stages-section .left-content {
+  max-width: 589px;
+  width: 100%;
+  min-height: 379px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Heading */
+.stages-heading {
+  font-size: 39px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.stages-heading em {
+  font-style: italic;
+  font-weight: 600;
+  color: black;
+}
+
+/* Stage blocks */
+.stage-item {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+/* Colored squares */
+.stage-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+
+.stage-dot.pink {
+  background: var(--brand-accent-primary);
+}
+
+.stage-dot.blue {
+  background: var(--brand-accent-secondary);
+}
+
+/* Text */
+.stage-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.stage-text .stage-detail {
+  margin-left: -15px;
+  max-width: 479px;
+}
+
+.stage-text p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.stage-text p strong {
+  font-weight: 600;
+}
+
+.stages-section .right-content {
+  max-width: 632px;
+  width: 100%;
+  min-height: 553px;
+  position: relative;
+}
+
+.stages-section .right-content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .stages-items-container {
+    justify-content: flex-end;
+  }
+  .stages-items-container .square {
+    display: none;
+  }
+  .stages-items-container .rectangle {
+    width: 20px;
+    height: 20px;
+    background: var(--brand-primary-one);
+  }
+  .stages-section .stages-contents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .left-content .stages-heading {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+  }
+
+  .stage-text .stage-detail {
+    margin-left: 1px;
+    max-width: 479px;
+  }
+  .stage-text p {
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  .stage-text p::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    left: -4%;
+    top: 20%;
+    border-radius: 100%;
+    background: var(--text-primary);
+  }
+
+  .stages-section .right-content {
+  max-width: 358px;
+  width: 100%;
+  min-height: 291px;
+  position: relative;
+}
+}
