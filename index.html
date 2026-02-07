@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tetr College of Business - Learn Business by Doing Business</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.umd.min.js"
+    ></script>
+
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
@@ -111,7 +116,7 @@
         <!-- HERO SECTION START -->
         <section class="hero-section hero-desktop dotted-grid">
           <div class="hero-banner">
-            <div class="hero-image-mask">
+            <div class="hero-image-mask img-reveal">
               <img src="./assets/images/banner/ASU.png" alt="" />
             </div>
           </div>
@@ -122,7 +127,7 @@
 
           <div class="bottom-container dotted-grid">
             <div class="content">
-              <p>
+              <p class="text-blur-revealDOWN">
                 A Global
                 <strong
                   >Bachelor’s in Finance & <br />
@@ -132,13 +137,13 @@
                 and build across 7 global markets.
               </p>
               <div class="content-cta">
-                <button>
+                <button class="slide-right">
                   <span> APPLY NOW </span>
                   <span
                     ><img src="./assets/icons/buttons/upRight.svg" alt=""
                   /></span>
                 </button>
-                <button>
+                <button class="slide-left">
                   <span> DOWNLOAD BROCHURE </span>
                   <span
                     ><img src="./assets/icons/buttons/upRight.svg" alt=""
@@ -152,7 +157,7 @@
         <!-- Mobile HERO Section -->
         <section class="hero-mobile">
           <!-- Image -->
-          <div class="hero-mobile-image">
+          <div class="hero-mobile-image img-reveal">
             <img src="./assets/images/banner/mobile/mobilebanner.png" alt="" />
           </div>
 
@@ -161,26 +166,26 @@
             <div class="mobile-boxes-container">
               <div class="mobile-boxes-grid">
                 <div class="mobile-box"></div>
-                <div class="mobile-box" data-color=""></div>
+                <div class="mobile-box"></div>
                 <div class="mobile-box"></div>
                 <div class="mobile-box"></div>
                 <div class="mobile-box"></div>
                 <div class="mobile-box"></div>
               </div>
             </div>
-            <p>
+            <p class="text-blur-revealUP">
               A global
               <strong>Bachelor's Program in Management & Technology</strong>,
               where you live and learn across 7 countries
             </p>
 
             <div class="hero-mobile-cta">
-              <button class="primary">
+              <button class="primary slide-left">
                 APPLY NOW
                 <img src="./assets/icons/buttons/upRight.svg" alt="" />
               </button>
 
-              <button class="secondary">
+              <button class="secondary slide-right">
                 DOWNLOAD BROCHURE
                 <img src="./assets/icons/buttons/upRight.svg" alt="" />
               </button>
@@ -197,7 +202,7 @@
           </div>
           <div class="stages-contents">
             <div class="left-content">
-              <h2 class="stages-heading">
+              <h2 class="stages-heading text-blur-revealDOWN">
                 <span>Two Tracks.</span>
                 <span> <em>Two Ways to Build.</em></span>
               </h2>
@@ -206,8 +211,8 @@
               <div class="stage-item">
                 <span class="stage-dot pink"></span>
                 <div class="stage-text">
-                  <h4>Zero-to-One | Idea Stage</h4>
-                  <div class="stage-detail">
+                  <h4 class="View-slide-left">Zero-to-One | Idea Stage</h4>
+                  <div class="stage-detail text-blur-revealUP">
                     <p>
                       For <strong>aspiring founders</strong> with a
                       research-backed idea and the drive to take their first
@@ -226,8 +231,8 @@
               <div class="stage-item">
                 <span class="stage-dot blue"></span>
                 <div class="stage-text">
-                  <h4>One-to-N | Growth Stage</h4>
-                  <div class="stage-detail">
+                  <h4 class="slide-left">One-to-N | Growth Stage</h4>
+                  <div class="stage-detail text-blur-revealUP">
                     <p>
                       For <strong>early stage founders</strong> who already have
                       a working product, early users, traction, or revenue.
@@ -241,7 +246,7 @@
               </div>
             </div>
 
-            <div class="right-content">
+            <div class="right-content img-mask-reveal">
               <img src="./assets/images/stages/communication.png" alt="" />
             </div>
           </div>
@@ -256,7 +261,7 @@
               <h2 class="process-title">
                 Apply for our<br />
                 September 2026 Batch<br />
-                <em>Get Started</em>
+                <em class="zoom-out">Get Started</em>
               </h2>
               <!-- Decorative dots - left side -->
               <div class="process-dots-left">
@@ -274,7 +279,7 @@
             </div>
 
             <!-- Apply Now Button - Top Right -->
-            <div class="right-angle-button">
+            <div class="right-angle-button magnetic-reveal">
               <span class="top-right">
                 <img src="./assets/icons/buttons/upRight.svg" alt="" />
               </span>
@@ -283,14 +288,16 @@
           </div>
 
           <!-- Subtitle -->
-          <p class="process-subtitle">A simple 3-step admission process</p>
+          <p class="process-subtitle text-blur-revealUP">
+            A simple 3-step admission process
+          </p>
 
           <!-- Timeline -->
           <div class="process-timeline">
             <div class="timeline-line">
-              <span class="timeline-marker"></span>
-              <span class="timeline-marker"></span>
-              <span class="timeline-marker"></span>
+              <span class="timeline-marker slide-left"></span>
+              <span class="timeline-marker text-blur-revealUP"></span>
+              <span class="timeline-marker slide-right"></span>
             </div>
 
             <!-- Steps Grid -->
@@ -342,7 +349,9 @@
           <span class="square"> </span>
 
           <div class="challenges-text">
-            <h2>Why Join <em>The Builder's Challenge?</em></h2>
+            <h2 class="text-blur-revealUP">
+              Why Join <em>The Builder's Challenge?</em>
+            </h2>
             <p>
               A challenge designed to accelerate your founder journey with
               capital, visibility, mentorship, and community.
@@ -358,7 +367,15 @@
 
               <div class="grant-block">
                 <p class="label">Overall Championship Winner</p>
-                <p class="amount">5000 <span>USD</span></p>
+                <p class="amount">
+                  <span
+                    class="count-upNO"
+                    data-from="0"
+                    data-to="5000"
+                    data-duration="1.5"
+                  ></span>
+                  <span>USD</span>
+                </p>
                 <p class="track">One-to-N Track</p>
               </div>
 
@@ -366,12 +383,22 @@
                 <p class="section-title">Regional Winners</p>
                 <div class="grant-grid">
                   <div class="grant-item">
-                    <p class="amount small">2500 <span>USD</span></p>
+                    <p class="amount small"><span
+                    class="count-upNO"
+                    data-from="0"
+                    data-to="2500"
+                    data-duration="1.5"
+                  ></span> <span>USD</span></p>
                     <p class="track">Growth | One-to-N</p>
                   </div>
                   <span class="green-col"></span>
                   <div class="grant-item">
-                    <p class="amount small">500 <span>USD</span></p>
+                    <p class="amount small"><span
+                    class="count-upNO"
+                    data-from="0"
+                    data-to="500"
+                    data-duration="1.5"
+                  ></span> <span>USD</span></p>
                     <p class="track">Idea | Zero-to-One</p>
                   </div>
                 </div>
@@ -381,12 +408,22 @@
                 <p class="section-title">E-Cell Grants</p>
                 <div class="grant-grid">
                   <div class="grant-item">
-                    <p class="amount small">2500 <span>USD</span></p>
+                    <p class="amount small"><span
+                    class="count-upNO"
+                    data-from="0"
+                    data-to="2500"
+                    data-duration="1.5"
+                  ></span> <span>USD</span></p>
                     <p class="track">Growth | One-to-N</p>
                   </div>
                   <span class="green-col"></span>
                   <div class="grant-item">
-                    <p class="amount small">500 <span>USD</span></p>
+                    <p class="amount small"><span
+                    class="count-upNO"
+                    data-from="0"
+                    data-to="500"
+                    data-duration="1.5"
+                  ></span> <span>USD</span></p>
                     <p class="track">Idea | Zero-to-One</p>
                   </div>
                 </div>
@@ -398,37 +435,44 @@
 
         <!-- JOURNEY SECTION START -->
         <section class="journey-section">
-    <div class="journey-scroll">
-      <div class="sticky-container">
-        <div class="track-container">
-          <!-- Panel 1: London -->
-          <div class="panel-frame london">
-            <div class="panel-content">
-              
-              <div class="combine-container">
-                <div class="left-container">
-                  <img src="./assets/images/journey/london/first.png" alt="">
-                </div>
-                <div class="right-container">
-                  <div class="header-content">
-                    <h2>Young Leaders Forum</h2>
-                  </div>
-                  <div class="right-image">
-                    <img src="./assets/images/journey/london/second.png" alt="">
-                  </div>
+          <div class="journey-scroll">
+            <div class="sticky-container">
+              <div class="track-container">
+                <!-- Panel 1: London -->
+                <div class="panel-frame london">
+                  <div class="panel-content">
+                    <div class="combine-container">
+                      <div class="left-container">
+                        <img
+                          src="./assets/images/journey/london/first.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="right-container">
+                        <div class="header-content">
+                          <h2>Young Leaders Forum</h2>
+                        </div>
+                        <div class="right-image">
+                          <img
+                            src="./assets/images/journey/london/second.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="top-right-image">
+                      <img
+                        src="./assets/images/journey/london/third.png"
+                        alt=""
+                      />
+                    </div>
 
-                </div>
-              </div>
-              <div class="top-right-image">
-                <img src="./assets/images/journey/london/third.png" alt="">
-              </div>
+                    <div class="connecting-squares">
+                      <span class="connect-line-bottom"></span>
+                      <span class="connect-line-right"></span>
+                    </div>
 
-    <div class="connecting-squares">
-    <span class="connect-line-bottom"></span>
-    <span class="connect-line-right"></span>
-    </div>
-
-    <!-- <div class="maxico-journey-connector">
+                    <!-- <div class="maxico-journey-connector">
       <span class="line"></span>
       <span class="node"></span>
 
@@ -438,257 +482,309 @@
   <span class="line"></span>
 </div> -->
 
-
-              <div class="bottom-content">
-                <p>London</p>
-                <p>The Goa Leadership Retreat was all about learning, bonding, and having a blast. From visiting Feni distilleries and hidden cafés to chatting with Goan entrepreneurs, we got a masterclass in how local businesses thrive.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Panel 2: Mexico -->
-          <div class="panel-frame mexico">
-            <div class="panel-content">
-    <span class="mexico-connect-line-right"></span>
-    <span class="mexico-connect-line-two-right"></span>
-    <span class="mexico-connect-line-bottom"></span>
-    <span class="mexico-connect-line-three-right"></span>
-
-
-
-              <div class="mexico-container">
-                <div class="left-container">
-                  <div class="mexico-header">
-                    <p>Mexico</p>
-                    <p>The Tetr Tribe brought the spirit of Tetr to Mexico, meeting with future students through engaging sessions and giving them a taste of the bold, global journey ahead.</p>
-                  </div>
-                  <div class="bottom-image-wrapper">
-                    <div class="left-bottom">
-                      <img src="./assets/images/journey/mexico/group1.png" alt="">
-                    </div>
-                    <div class="right-bottom">
-                      <img src="./assets/images/journey/mexico/group2.png" alt="">
-                      <img class="bottomestImage" src="./assets/images/journey/mexico/group3.png" alt="">
-                      
+                    <div class="bottom-content">
+                      <p>London</p>
+                      <p>
+                        The Goa Leadership Retreat was all about learning,
+                        bonding, and having a blast. From visiting Feni
+                        distilleries and hidden cafés to chatting with Goan
+                        entrepreneurs, we got a masterclass in how local
+                        businesses thrive.
+                      </p>
                     </div>
                   </div>
-
-                  
-                </div>
-                <div class="right-container">
-                  <img src="./assets/images/journey/mexico/group4.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 3: Europe -->
-          <div class="panel-frame europe">
-            <div class="panel-content">
-    <span class="europe-connect-line-right"></span>
-    <span class="europe-connect-line-two-right"></span>
-    <span class="europe-connect-line-three-right"></span>
-    <span class="europe-connect-line-fourth-right"></span>
-    <span class="europe-connect-line-bottom"></span>
-    <span class="europe-connect-line-two-bottom"></span>
-
-
-              <div class="europe-container">
-                <div  class="europe-group-1">
-                  <p>Europe</p>
-                  <div class="europe-image-wrapper-one">
-                    <img src="./assets/images/journey/europe/groupOneImage.png" alt="">
-                  </div>
-
-                </div>
-                <div  class="europe-group-2">
-                  <p>Tetr’s European takeover made waves in Greece, Austria, Germany and Switzerland. Across classrooms, students and faculty explored Tetr’s forward-thinking education model, sparking collaboration and building global connections.</p>
-                  <div class="europe-image-wrapper-two">
-                    <img src="./assets/images/journey/europe/groupTwoImage.png" alt="">
-                  </div>
-
-                </div>
-                <div  class="europe-group-3">
-                  <div class="europe-image-wrapper-three">
-                    <img src="./assets/images/journey/europe/groupThreeImage.png" alt="">
-                  </div>
-
                 </div>
 
-              </div>
-            </div>
-          </div>
+                <!-- Panel 2: Mexico -->
+                <div class="panel-frame mexico">
+                  <div class="panel-content">
+                    <span class="mexico-connect-line-right"></span>
+                    <span class="mexico-connect-line-two-right"></span>
+                    <span class="mexico-connect-line-bottom"></span>
+                    <span class="mexico-connect-line-three-right"></span>
 
-          <!-- Panel 4: Dubai -->
-           <div class="panel-frame dubai">
-            <div class="panel-content">
-    <span class="dubai-connect-line-right"></span>
-
-              <div class="dubai-container">
-                <div class="dubai-group-content">
-                  <div class="dubai-images-group">
-                      <img class="left-image" src="./assets/images/journey/dubai/dubai-group1.png" alt="">
-                    <div class="dubai-combined-img">
-                      <div class="dubai-group-pic1">
-                        <img  src="./assets/images/journey/dubai/teacher-group.png" alt="">
+                    <div class="mexico-container">
+                      <div class="left-container">
+                        <div class="mexico-header">
+                          <p>Mexico</p>
+                          <p>
+                            The Tetr Tribe brought the spirit of Tetr to Mexico,
+                            meeting with future students through engaging
+                            sessions and giving them a taste of the bold, global
+                            journey ahead.
+                          </p>
+                        </div>
+                        <div class="bottom-image-wrapper">
+                          <div class="left-bottom">
+                            <img
+                              src="./assets/images/journey/mexico/group1.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="right-bottom">
+                            <img
+                              src="./assets/images/journey/mexico/group2.png"
+                              alt=""
+                            />
+                            <img
+                              class="bottomestImage"
+                              src="./assets/images/journey/mexico/group3.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="dubai-group-pic2">
-                        <img  src="./assets/images/journey/dubai/teachers.png" alt="">
+                      <div class="right-container">
+                        <img
+                          src="./assets/images/journey/mexico/group4.png"
+                          alt=""
+                        />
                       </div>
                     </div>
-
                   </div>
-                  <div class="dubai-bottom-content">
-                    <p>Dubai</p>
-                    <p>The Tetr Tribe stepped up as mentors. They guided high school students from various schools on preparing business ideas and pitching solutions to real-world problems.</p>
-                  </div>
-
-                  
-
-
                 </div>
-                <img src="./assets/images/journey/dubai/anchor.png" alt="">
+
+                <!-- Panel 3: Europe -->
+                <div class="panel-frame europe">
+                  <div class="panel-content">
+                    <span class="europe-connect-line-right"></span>
+                    <span class="europe-connect-line-two-right"></span>
+                    <span class="europe-connect-line-three-right"></span>
+                    <span class="europe-connect-line-fourth-right"></span>
+                    <span class="europe-connect-line-bottom"></span>
+                    <span class="europe-connect-line-two-bottom"></span>
+
+                    <div class="europe-container">
+                      <div class="europe-group-1">
+                        <p>Europe</p>
+                        <div class="europe-image-wrapper-one">
+                          <img
+                            src="./assets/images/journey/europe/groupOneImage.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="europe-group-2">
+                        <p>
+                          Tetr’s European takeover made waves in Greece,
+                          Austria, Germany and Switzerland. Across classrooms,
+                          students and faculty explored Tetr’s forward-thinking
+                          education model, sparking collaboration and building
+                          global connections.
+                        </p>
+                        <div class="europe-image-wrapper-two">
+                          <img
+                            src="./assets/images/journey/europe/groupTwoImage.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="europe-group-3">
+                        <div class="europe-image-wrapper-three">
+                          <img
+                            src="./assets/images/journey/europe/groupThreeImage.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 4: Dubai -->
+                <div class="panel-frame dubai">
+                  <div class="panel-content">
+                    <span class="dubai-connect-line-right"></span>
+
+                    <div class="dubai-container">
+                      <div class="dubai-group-content">
+                        <div class="dubai-images-group">
+                          <img
+                            class="left-image"
+                            src="./assets/images/journey/dubai/dubai-group1.png"
+                            alt=""
+                          />
+                          <div class="dubai-combined-img">
+                            <div class="dubai-group-pic1">
+                              <img
+                                src="./assets/images/journey/dubai/teacher-group.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="dubai-group-pic2">
+                              <img
+                                src="./assets/images/journey/dubai/teachers.png"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dubai-bottom-content">
+                          <p>Dubai</p>
+                          <p>
+                            The Tetr Tribe stepped up as mentors. They guided
+                            high school students from various schools on
+                            preparing business ideas and pitching solutions to
+                            real-world problems.
+                          </p>
+                        </div>
+                      </div>
+                      <img
+                        src="./assets/images/journey/dubai/anchor.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-
-           </div>
-
-        </div>
-      </div>
-    </div>
-    
+          </div>
         </section>
         <!-- JOURNEY SECTION END -->
 
         <!-- CONTACT SECTION START -->
-         <section class="contact-section">
-        <div class="contact-container">
+        <section class="contact-section">
+          <div class="contact-container">
             <div class="left-image">
-                <img src="./assets/images/banner/contact-banner.png" alt="Team collaboration">
+              <img
+                src="./assets/images/banner/contact-banner.png"
+                alt="Team collaboration"
+              />
             </div>
-            
+
             <form class="form-section" id="submissionForm">
-                <h2><span>Submit</span> Your Entry</h2>
-                
-                <div class="success-message" id="successMessage">
-                    ✓ Your entry has been submitted successfully!
-                </div>
+              <h2 class="text-blur-revealUP"><span>Submit</span> Your Entry</h2>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <input 
-                            type="text" 
-                            class="form-control" 
-                            id="teamName" 
-                            placeholder="Enter Team Name*" 
-                            required
-                        >
-                        <span class="error-message" id="teamNameError">Team name is required</span>
-                    </div>
-                    <div class="form-group">
-                        <input 
-                            type="text" 
-                            class="form-control" 
-                            id="teamId" 
-                            placeholder="Enter Team ID*" 
-                            required
-                        >
-                        <span class="error-message" id="teamIdError">Team ID is required</span>
-                    </div>
-                </div>
+              <div class="success-message" id="successMessage">
+                ✓ Your entry has been submitted successfully!
+              </div>
 
-                <div class="form-group full-width">
-                    <input 
-                        type="url" 
-                        class="form-control" 
-                        id="linkedinPost" 
-                        placeholder="Enter LinkedIn Post Link"
-                    >
-                    <span class="error-message" id="linkedinError">Please enter a valid URL</span>
+              <div class="form-row">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control slide-left"
+                    id="teamName"
+                    placeholder="Enter Team Name*"
+                    required
+                  />
+                  <span class="error-message" id="teamNameError"
+                    >Team name is required</span
+                  >
                 </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control slide-right"
+                    id="teamId"
+                    placeholder="Enter Team ID*"
+                    required
+                  />
+                  <span class="error-message" id="teamIdError"
+                    >Team ID is required</span
+                  >
+                </div>
+              </div>
 
-                <div class="form-group full-width">
-                    <input 
-                        type="url" 
-                        class="form-control" 
-                        id="driveLink" 
-                        placeholder="Enter Drive Link*" 
-                        required
-                    >
-                    <span class="error-message" id="driveError">Drive link is required</span>
-                </div>
+              <div class="form-group full-width">
+                <input
+                  type="url"
+                  class="form-control text-blur-revealUP"
+                  id="linkedinPost"
+                  placeholder="Enter LinkedIn Post Link"
+                />
+                <span class="error-message" id="linkedinError"
+                  >Please enter a valid URL</span
+                >
+              </div>
 
-                <div class="checkbox-group">
-                    <div class="checkbox-wrapper">
-                        <input 
-                            type="checkbox" 
-                            id="agreeTerms" 
-                            required
-                        >
-                    </div>
-                    <label class="checkbox-label" for="agreeTerms">
-                        I agree to receive information regarding my submitted application by signing up on Tetr <span class="required">*</span>
-                    </label>
+              <div class="form-group full-width">
+                <input
+                  type="url"
+                  class="form-control text-blur-revealUP"
+                  id="driveLink"
+                  placeholder="Enter Drive Link*"
+                  required
+                />
+                <span class="error-message" id="driveError"
+                  >Drive link is required</span
+                >
+              </div>
+
+              <div class="checkbox-group">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="agreeTerms" required />
                 </div>
-                <span class="error-message" id="termsError">You must agree to continue</span>
-                
-                <button type="submit" class="submit-btn" id="submitBtn">
-                    SUBMIT
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </button>
+                <label class="checkbox-label" for="agreeTerms">
+                  I agree to receive information regarding my submitted
+                  application by signing up on Tetr
+                  <span class="required">*</span>
+                </label>
+              </div>
+              <span class="error-message" id="termsError"
+                >You must agree to continue</span
+              >
+
+              <button type="submit" class="submit-btn View-slide-left" id="submitBtn">
+                SUBMIT
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
             </form>
-        </div>
-    </section>
+          </div>
+        </section>
         <!-- CONTACT SECTION END -->
       </main>
       <footer></footer>
     </div>
     <script src="./scripts/core/toggleMenu.js"></script>
     <script src="./scripts/main.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+    <script type="module" src="./scripts/motion/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
 
-  const section = document.querySelector(".journey-section");
-  const track = document.querySelector(".track-container");
-  
-  if (!section || !track) return;
+        const section = document.querySelector(".journey-section");
+        const track = document.querySelector(".track-container");
 
-  // Set section height to accommodate all panels
-  section.style.height = `${window.innerHeight * 3}px`; // Adjust based on panel count
+        if (!section || !track) return;
 
-  // Animate horizontal movement based on vertical scroll
-  gsap.to(track, {
-    x: () => -((track.scrollWidth - window.innerWidth)),
-    ease: "none",
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 0.5,
-      pin: true,
-      markers: false, 
-      invalidateOnRefresh: true
-    }
-  });
+        // Set section height to accommodate all panels
+        section.style.height = `${window.innerHeight * 3}px`; // Adjust based on panel count
 
-  // Ensure normal scroll works outside the section
-  ScrollTrigger.create({
-    trigger: "footer", 
-    start: "top bottom",
-    onEnter: () => {
-      document.body.style.overflow = "auto";
-    }
-  });
-});
-</script>
+        // Animate horizontal movement based on vertical scroll
+        gsap.to(track, {
+          x: () => -(track.scrollWidth - window.innerWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.5,
+            pin: true,
+            markers: false,
+            invalidateOnRefresh: true,
+          },
+        });
 
-
-
+        // Ensure normal scroll works outside the section
+        ScrollTrigger.create({
+          trigger: "footer",
+          start: "top bottom",
+          onEnter: () => {
+            document.body.style.overflow = "auto";
+          },
+        });
+      });
+    </script>
   </body>
 </html>
