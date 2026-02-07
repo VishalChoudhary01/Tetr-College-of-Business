@@ -560,12 +560,96 @@
     </div>
     
         </section>
-
         <!-- JOURNEY SECTION END -->
+
+        <!-- CONTACT SECTION START -->
+         <section class="contact-section">
+        <div class="contact-container">
+            <div class="left-image">
+                <img src="./assets/images/banner/contact-banner.png" alt="Team collaboration">
+            </div>
+            
+            <form class="form-section" id="submissionForm">
+                <h2><span>Submit</span> Your Entry</h2>
+                
+                <div class="success-message" id="successMessage">
+                    ✓ Your entry has been submitted successfully!
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="teamName" 
+                            placeholder="Enter Team Name*" 
+                            required
+                        >
+                        <span class="error-message" id="teamNameError">Team name is required</span>
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="teamId" 
+                            placeholder="Enter Team ID*" 
+                            required
+                        >
+                        <span class="error-message" id="teamIdError">Team ID is required</span>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <input 
+                        type="url" 
+                        class="form-control" 
+                        id="linkedinPost" 
+                        placeholder="Enter LinkedIn Post Link"
+                    >
+                    <span class="error-message" id="linkedinError">Please enter a valid URL</span>
+                </div>
+
+                <div class="form-group full-width">
+                    <input 
+                        type="url" 
+                        class="form-control" 
+                        id="driveLink" 
+                        placeholder="Enter Drive Link*" 
+                        required
+                    >
+                    <span class="error-message" id="driveError">Drive link is required</span>
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-wrapper">
+                        <input 
+                            type="checkbox" 
+                            id="agreeTerms" 
+                            required
+                        >
+                    </div>
+                    <label class="checkbox-label" for="agreeTerms">
+                        I agree to receive information regarding my submitted application by signing up on Tetr <span class="required">*</span>
+                    </label>
+                </div>
+                <span class="error-message" id="termsError">You must agree to continue</span>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    SUBMIT
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+        <!-- CONTACT SECTION END -->
       </main>
       <footer></footer>
     </div>
     <script src="./scripts/core/toggleMenu.js"></script>
+    <script src="./scripts/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -588,14 +672,14 @@ document.addEventListener("DOMContentLoaded", () => {
       end: "bottom bottom",
       scrub: 0.5,
       pin: true,
-      markers: false, // Set to true for debugging
+      markers: false, 
       invalidateOnRefresh: true
     }
   });
 
   // Ensure normal scroll works outside the section
   ScrollTrigger.create({
-    trigger: "footer", // or the element after journey-section
+    trigger: "footer", 
     start: "top bottom",
     onEnter: () => {
       document.body.style.overflow = "auto";

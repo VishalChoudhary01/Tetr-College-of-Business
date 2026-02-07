@@ -1,12 +1,15 @@
-:root{
---brand-primary-one:#003318;
---brand-primary-two:#004822;
---brand-secondary-one:#F0C300;
+:root {
+  --brand-primary-one: #003318;
+  --brand-primary-two: #009c50;
+  --brand-secondary-one: #f0c300;
+  --brand-tertinary: #004822;
+  --brand-accent-primary: #f8769a;
+  --brand-accent-secondary: #4cc9e9;
 
-/* Text colors */
---gray-900:#090909;
---text-primary: var(--gray-900);
---text-secondary: var(--gray-600);
---text-muted: var(--gray-500);
---text-inverse: var(--white);
+  /* Text colors */
+  --gray-900: #090909;
+  --lightest-gray: #ffffffca;
+  --text-primary-white: #ffff;
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--lightest-gray);
 }
