@@ -4,10 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tetr College of Business - Learn Business by Doing Business</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <link rel="stylesheet" href="./styles/main.css" />
+    <style>
+      /* Journey Section Styles */
+      .journey-section {
+        background: var(--brand-primary-one);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .journey-scroll {
+        height: 300vh;
+        position: relative;
+      }
+
+      .sticky-container {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .track-container {
+        display: flex;
+        height: 100vh;
+        width: 300vw;
+        will-change: transform;
+        transition: transform 0.1s linear;
+      }
+
+      .panel-frame {
+        width: 100vw;
+        height: 100vh;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px;
+        position: relative;
+      }
+
+      .panel-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .panel-frame.london {
+        background: #1a472a;
+      }
+
+      .panel-frame.mexico {
+        background: #2d5a3f;
+      }
+
+      .panel-frame.europe {
+        background: #406d54;
+      }
+
+      .panel-frame h1 {
+        font-size: 64px;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 16px 0;
+        line-height: 1.2;
+      }
+
+      .panel-frame p {
+        font-size: 18px;
+        color: #ffffff;
+        margin: 0;
+        line-height: 1.6;
+        max-width: 600px;
+      }
+
+      @media (max-width: 768px) {
+        .panel-frame {
+          padding: 40px 24px;
+        }
+
+        .panel-frame h1 {
+          font-size: 40px;
+        }
+
+        .panel-frame p {
+          font-size: 16px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="page-container">
@@ -40,7 +126,7 @@
             <span class="hamburger-line"></span>
           </button>
         </nav>
-        <!-- Mobile Menu Overlay - THIS WAS MISSING! -->
+        <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
         <!-- Mobile Menu Side Panel -->
         <div class="mobile-menu" id="mobileMenu">
@@ -125,7 +211,7 @@
               <p>
                 A Global
                 <strong
-                  >Bachelor’s in Finance & <br />
+                  >Bachelor's in Finance & <br />
                   Artificial Intelligence</strong
                 >
                 where you learn <br />
@@ -214,7 +300,7 @@
                       bold step.
                     </p>
                     <p>
-                      You’ve identified a real problem, studied the user,
+                      You've identified a real problem, studied the user,
                       validated early signals, and are ready to build from
                       scratch.
                     </p>
@@ -398,187 +484,109 @@
 
         <!-- JOURNEY SECTION START -->
         <section class="journey-section">
-    <div class="journey-scroll">
-      <div class="sticky-container">
-        <div class="track-container">
-          <!-- Panel 1: Young Leaders Forum -->
-          <div class="panel-frame london">
-            <div class="panel-content">
-              
-              <div class="combine-container">
-                <div class="left-container">
-                  <img src="./assets/images/journey/london/first.png" alt="">
+          <div class="journey-scroll" id="journeyScroll">
+            <div class="sticky-container">
+              <div class="track-container" id="trackContainer">
+                <!-- Panel 1: Young Leaders Forum -->
+                <div class="panel-frame london">
+                  <div class="panel-content">
+                    <h1>Young Leaders Forum</h1>
+                    <p>London experience with students and creators.</p>
+                  </div>
                 </div>
-                <div class="right-container">
-                  <div class="header-content">
-                    <h2>Young Leaders Forum</h2>
-                    <!-- <p>From campus to the world</p> -->
-                  </div>
-                  <div class="right-image">
-                    <img src="./assets/images/journey/london/second.png" alt="">
-                  </div>
 
+                <!-- Panel 2: Mexico -->
+                <div class="panel-frame mexico">
+                  <div class="panel-content">
+                    <h1>Mexico</h1>
+                    <p>Global exposure, culture, leadership sessions.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="top-right-image">
-                <img src="./assets/images/journey/london/third.png" alt="">
-              </div>
 
-    <div class="connecting-squares">
-    <span class="connect-line-bottom"></span>
-    <span class="connect-line-right"></span>
-    </div>
-
-    <!-- <div class="maxico-journey-connector">
-      <span class="line"></span>
-      <span class="node"></span>
-
-  <span class="label">Mexico</span>
-
-  <span class="node"></span>
-  <span class="line"></span>
-</div> -->
-
-
-              <div class="bottom-content">
-                <p>London</p>
-                <p>The Goa Leadership Retreat was all about learning, bonding, and having a blast. From visiting Feni distilleries and hidden cafés to chatting with Goan entrepreneurs, we got a masterclass in how local businesses thrive.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Panel 2: Mexico -->
-          <div class="panel-frame mexico">
-            <div class="panel-content">
-    <span class="mexico-connect-line-right"></span>
-    <span class="mexico-connect-line-two-right"></span>
-    <span class="mexico-connect-line-bottom"></span>
-
-
-              <div class="mexico-container">
-                <div class="left-container">
-                  <div class="mexico-header">
-                    <p>Mexico</p>
-                    <p>The Tetr Tribe brought the spirit of Tetr to Mexico, meeting with future students through engaging sessions and giving them a taste of the bold, global journey ahead.</p>
+                <!-- Panel 3: Europe -->
+                <div class="panel-frame europe">
+                  <div class="panel-content">
+                    <h1>Europe</h1>
+                    <p>Academic innovation and modern leadership.</p>
                   </div>
-                  <div class="bottom-image-wrapper">
-                    <div class="left-bottom">
-                      <img src="./assets/images/journey/mexico/group1.png" alt="">
-                    </div>
-                    <div class="right-bottom">
-                      <img src="./assets/images/journey/mexico/group2.png" alt="">
-                      <img class="bottomestImage" src="./assets/images/journey/mexico/group3.png" alt="">
-                      
-                    </div>
-                  </div>
-
-                  
-                </div>
-                <div class="right-container">
-                  <img src="./assets/images/journey/mexico/group4.png" alt="">
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Panel 3: Europe -->
-          <div class="panel-frame europe">
-            <div class="panel-content">
-              <h1>Europe</h1>
-              <p>Academic innovation and modern leadership.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </section>
-
+        </section>
         <!-- JOURNEY SECTION END -->
       </main>
       <footer></footer>
     </div>
+
     <script src="./scripts/core/toggleMenu.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+    
+    <!-- Vanilla JS Horizontal Scroll -->
+    <script>
+      function initHorizontalScroll() {
+        const journeyScroll = document.getElementById('journeyScroll');
+        const trackContainer = document.getElementById('trackContainer');
+        
+        if (!journeyScroll || !trackContainer) {
+          console.error('Journey scroll elements not found');
+          return;
+        }
 
-  const section = document.querySelector(".journey-section");
-  const track = document.querySelector(".track-container");
-  const panels = gsap.utils.toArray(".panel-frame");
+        const panels = document.querySelectorAll('.panel-frame');
+        const totalPanels = panels.length;
+        
+        // Calculate max translate (for 3 panels = 200vw)
+        const maxTranslate = (totalPanels - 1) * 100;
 
-  if (!section || !track || !panels.length) return;
+        function updateScroll() {
+          // Get the bounding rect of the scroll container
+          const rect = journeyScroll.getBoundingClientRect();
+          const scrollHeight = journeyScroll.offsetHeight;
+          const viewportHeight = window.innerHeight;
+          
+          // Calculate scroll progress (0 to 1)
+          // When top of section hits top of viewport = 0
+          // When bottom of section hits bottom of viewport = 1
+          const scrollStart = rect.top;
+          const scrollEnd = rect.bottom - viewportHeight;
+          const scrollDistance = scrollHeight - viewportHeight;
+          
+          let progress = 0;
+          
+          if (scrollStart <= 0 && scrollEnd >= 0) {
+            // We're in the scrolling zone
+            progress = Math.abs(scrollStart) / scrollDistance;
+            progress = Math.max(0, Math.min(1, progress)); // Clamp between 0 and 1
+          } else if (scrollStart > 0) {
+            // Before the section
+            progress = 0;
+          } else {
+            // After the section
+            progress = 1;
+          }
+          
+          // Calculate translate value
+          const translateX = progress * maxTranslate;
+          
+          // Apply transform
+          trackContainer.style.transform = `translateX(-${translateX}vw)`;
+        }
 
-  /* -------------------------
-     CLEAN RESET
-  -------------------------- */
-  ScrollTrigger.getAll().forEach(t => t.kill());
-  gsap.killTweensOf(track);
+        // Listen to scroll events
+        window.addEventListener('scroll', updateScroll, { passive: true });
+        
+        // Initial update
+        updateScroll();
+        
+        console.log('Horizontal scroll initialized with', totalPanels, 'panels');
+      }
 
-  /* -------------------------
-     HORIZONTAL SCROLL (PURE)
-  -------------------------- */
-  gsap.to(track, {
-    xPercent: -100 * (panels.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: () => `+=${window.innerHeight * (panels.length - 1)}`,
-      pin: true,
-      scrub: 1,              // smooth but unbreakable
-      anticipatePin: 1,
-      invalidateOnRefresh: true
-    }
-  });
-
-  /* -------------------------
-     PREVENT CLICK / JUMP
-     (ONLY WHILE PINNED)
-  -------------------------- */
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top top",
-    end: () => `+=${window.innerHeight * (panels.length - 1)}`,
-    onEnter: disableClicks,
-    onLeave: enableClicks,
-    onEnterBack: disableClicks,
-    onLeaveBack: enableClicks
-  });
-
-  function disableClicks() {
-    document.body.style.pointerEvents = "none";
-    section.style.pointerEvents = "auto"; // allow internal interaction
-  }
-
-  function enableClicks() {
-    document.body.style.pointerEvents = "";
-    section.style.pointerEvents = "";
-  }
-
-  /* -------------------------
-     RESIZE SAFETY
-  -------------------------- */
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 200);
-  });
-
-  /* -------------------------
-     PERFORMANCE
-  -------------------------- */
-  ScrollTrigger.config({
-    limitCallbacks: true,
-    ignoreMobileResize: true
-  });
-});
-</script>
-
-
-
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHorizontalScroll);
+      } else {
+        initHorizontalScroll();
+      }
+    </script>
   </body>
 </html>
