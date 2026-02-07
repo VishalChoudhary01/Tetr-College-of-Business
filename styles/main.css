@@ -639,8 +639,7 @@ position: absolute;
   transform: translateX(-50%);
 }
 
-
-
+/* hidden for mobile */
 @media (max-width:768px) {
   .journey-section {
  display: none;
