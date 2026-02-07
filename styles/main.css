@@ -102,6 +102,8 @@ body {
 
 }
 
+/* LONDON STYLE */
+
 .combine-container{
   max-width: 777px;
   max-height: 541px;
@@ -110,7 +112,7 @@ body {
 }
 
 .combine-container .right-container{
-  /* align-self: flex-end; */
+  align-self: flex-end;
   width: 325px;
   height: 472px;
 
@@ -404,6 +406,18 @@ body {
 
 }
 
+.mexico-connect-line-three-right{
+  position: absolute;
+  width: 540px;
+  height: 1px;
+  background: var(--brand-secondary-one);
+  right: -28%;
+  bottom: 10%;
+  z-index: -2;
+  transform: rotate(180deg);
+
+}
+
 /* small square at the edge */
 /* .mexico-connect-line-bottom::after {
   content: "";
@@ -416,3 +430,220 @@ body {
   transform: translateX(-50%);
 } */
 
+/* EUROPE STYLE */
+.europe-container{
+  width: 1336px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.europe-group-1{
+  width:420px ;
+  
+}
+
+.europe-group-1 p{
+  font-weight: 500;
+  font-size: 25px;
+  color: var(--text-primary-white);
+  text-align: end;
+  margin-bottom:2.2rem ;
+}
+
+.europe-image-wrapper-one{
+  height: 468px;
+  width: 100%;
+  /* display: inline-block; */
+  position: relative;
+}
+
+.europe-group-2{
+  width: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.europe-group-2 p{
+  text-align: justify;
+}
+
+.europe-connect-line-right{
+  position: absolute;
+  width: 440px;
+  height: 1px;
+  background: var(--brand-secondary-one);
+  left: -5%;
+    bottom: 11%;
+  z-index: -2;
+  transform: rotate(180deg);
+
+}
+
+.europe-connect-line-bottom{
+position: absolute;
+  top: 4%;
+  left: 14%;
+  width: 1px;
+  height: 85px;
+  background: var(--brand-secondary-one);
+  z-index: -2;
+}
+
+.europe-connect-line-bottom::before {
+  content: "";
+  position: absolute;
+  top: -5px;            
+  left: -2%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--brand-secondary-one);
+  transform: translateX(-50%);
+}
+
+.europe-connect-line-two-right{
+  position: absolute;
+  width: 140px;
+  height: 1px;
+  background: var(--brand-secondary-one);
+  left: 14%;
+    top: 4%;
+  z-index: -2;
+  transform: rotate(180deg);
+}
+
+.europe-connect-line-two-right::before {
+  content: "";
+  position: absolute;
+  top: -5px;            
+  left: -2%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--brand-secondary-one);
+  transform: translateX(-50%);
+}
+
+.europe-connect-line-two-bottom{
+  position: absolute;
+  top: 18%;
+  left: 650px;
+  width: 1px;
+  height: 185px;
+  background: var(--brand-secondary-one);
+  z-index: -2;
+}
+
+.europe-connect-line-two-bottom::before {
+  content: "";
+  position: absolute;
+  top: -5px;            
+  left: -2%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--brand-secondary-one);
+  transform: translateX(-50%);
+}
+
+.europe-connect-line-three-right{
+  position: absolute;
+  width: 840px;
+  height: 1px;
+  background: var(--brand-secondary-one);
+  left: 14%;
+  bottom: 11%;
+  z-index: -2;
+  transform: rotate(180deg);
+
+}
+.europe-connect-line-fourth-right{
+  position: absolute;
+  width: 840px;
+  height: 1px;
+  background: var(--brand-secondary-one);
+  left: 24%;
+  bottom: 11%;
+  z-index: -2;
+  transform: rotate(180deg);
+
+}
+
+
+/* Dubai Style */
+.dubai-container{
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dubai-group-content{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dubai-group-content .dubai-images-group{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.dubai-images-group .dubai-combined-img{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  position: relative;
+}
+
+
+.dubai-images-group .left-image{
+  width: 270px;
+  height: 312px;
+  position: relative;
+}
+
+.dubai-bottom-content p{
+  color: var(--lightest-gray);
+  font-size: 15px;
+}
+.dubai-bottom-content p:first-child{
+  color: var(--text-primary-white);
+  font-weight: 500;
+  font-size: 25px;
+  padding-bottom: 0.2rem;
+}
+
+.dubai-connect-line-right{
+  position: absolute;
+  width: 140px;
+  height: 1px;
+  background: var(--brand-secondary-one);
+  left: -15%;
+  bottom: 11%;
+  z-index: -2;
+  transform: rotate(180deg);
+}
+
+.dubai-connect-line-right::before {
+  content: "";
+  position: absolute;
+  top: -5px;            
+  left: -2%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--brand-secondary-one);
+  transform: translateX(-50%);
+}
+
+
+
+@media (max-width:768px) {
+  .journey-section {
+ display: none;
+}
+  
+}

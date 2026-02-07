@@ -401,7 +401,7 @@
     <div class="journey-scroll">
       <div class="sticky-container">
         <div class="track-container">
-          <!-- Panel 1: Young Leaders Forum -->
+          <!-- Panel 1: London -->
           <div class="panel-frame london">
             <div class="panel-content">
               
@@ -412,7 +412,6 @@
                 <div class="right-container">
                   <div class="header-content">
                     <h2>Young Leaders Forum</h2>
-                    <!-- <p>From campus to the world</p> -->
                   </div>
                   <div class="right-image">
                     <img src="./assets/images/journey/london/second.png" alt="">
@@ -454,6 +453,8 @@
     <span class="mexico-connect-line-right"></span>
     <span class="mexico-connect-line-two-right"></span>
     <span class="mexico-connect-line-bottom"></span>
+    <span class="mexico-connect-line-three-right"></span>
+
 
 
               <div class="mexico-container">
@@ -485,10 +486,75 @@
           <!-- Panel 3: Europe -->
           <div class="panel-frame europe">
             <div class="panel-content">
-              <h1>Europe</h1>
-              <p>Academic innovation and modern leadership.</p>
+    <span class="europe-connect-line-right"></span>
+    <span class="europe-connect-line-two-right"></span>
+    <span class="europe-connect-line-three-right"></span>
+    <span class="europe-connect-line-fourth-right"></span>
+    <span class="europe-connect-line-bottom"></span>
+    <span class="europe-connect-line-two-bottom"></span>
+
+
+              <div class="europe-container">
+                <div  class="europe-group-1">
+                  <p>Europe</p>
+                  <div class="europe-image-wrapper-one">
+                    <img src="./assets/images/journey/europe/groupOneImage.png" alt="">
+                  </div>
+
+                </div>
+                <div  class="europe-group-2">
+                  <p>Tetr’s European takeover made waves in Greece, Austria, Germany and Switzerland. Across classrooms, students and faculty explored Tetr’s forward-thinking education model, sparking collaboration and building global connections.</p>
+                  <div class="europe-image-wrapper-two">
+                    <img src="./assets/images/journey/europe/groupTwoImage.png" alt="">
+                  </div>
+
+                </div>
+                <div  class="europe-group-3">
+                  <div class="europe-image-wrapper-three">
+                    <img src="./assets/images/journey/europe/groupThreeImage.png" alt="">
+                  </div>
+
+                </div>
+
+              </div>
             </div>
           </div>
+
+          <!-- Panel 4: Dubai -->
+           <div class="panel-frame dubai">
+            <div class="panel-content">
+    <span class="dubai-connect-line-right"></span>
+
+              <div class="dubai-container">
+                <div class="dubai-group-content">
+                  <div class="dubai-images-group">
+                      <img class="left-image" src="./assets/images/journey/dubai/dubai-group1.png" alt="">
+                    <div class="dubai-combined-img">
+                      <div class="dubai-group-pic1">
+                        <img  src="./assets/images/journey/dubai/teacher-group.png" alt="">
+                      </div>
+                      <div class="dubai-group-pic2">
+                        <img  src="./assets/images/journey/dubai/teachers.png" alt="">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="dubai-bottom-content">
+                    <p>Dubai</p>
+                    <p>The Tetr Tribe stepped up as mentors. They guided high school students from various schools on preparing business ideas and pitching solutions to real-world problems.</p>
+                  </div>
+
+                  
+
+
+                </div>
+                <img src="./assets/images/journey/dubai/anchor.png" alt="">
+              </div>
+            </div>
+
+
+           </div>
+
         </div>
       </div>
     </div>
@@ -506,74 +572,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const section = document.querySelector(".journey-section");
   const track = document.querySelector(".track-container");
-  const panels = gsap.utils.toArray(".panel-frame");
+  
+  if (!section || !track) return;
 
-  if (!section || !track || !panels.length) return;
+  // Set section height to accommodate all panels
+  section.style.height = `${window.innerHeight * 3}px`; // Adjust based on panel count
 
-  /* -------------------------
-     CLEAN RESET
-  -------------------------- */
-  ScrollTrigger.getAll().forEach(t => t.kill());
-  gsap.killTweensOf(track);
-
-  /* -------------------------
-     HORIZONTAL SCROLL (PURE)
-  -------------------------- */
+  // Animate horizontal movement based on vertical scroll
   gsap.to(track, {
-    xPercent: -100 * (panels.length - 1),
+    x: () => -((track.scrollWidth - window.innerWidth)),
     ease: "none",
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => `+=${window.innerHeight * (panels.length - 1)}`,
+      end: "bottom bottom",
+      scrub: 0.5,
       pin: true,
-      scrub: 1,              // smooth but unbreakable
-      anticipatePin: 1,
+      markers: false, // Set to true for debugging
       invalidateOnRefresh: true
     }
   });
 
-  /* -------------------------
-     PREVENT CLICK / JUMP
-     (ONLY WHILE PINNED)
-  -------------------------- */
+  // Ensure normal scroll works outside the section
   ScrollTrigger.create({
-    trigger: section,
-    start: "top top",
-    end: () => `+=${window.innerHeight * (panels.length - 1)}`,
-    onEnter: disableClicks,
-    onLeave: enableClicks,
-    onEnterBack: disableClicks,
-    onLeaveBack: enableClicks
-  });
-
-  function disableClicks() {
-    document.body.style.pointerEvents = "none";
-    section.style.pointerEvents = "auto"; // allow internal interaction
-  }
-
-  function enableClicks() {
-    document.body.style.pointerEvents = "";
-    section.style.pointerEvents = "";
-  }
-
-  /* -------------------------
-     RESIZE SAFETY
-  -------------------------- */
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 200);
-  });
-
-  /* -------------------------
-     PERFORMANCE
-  -------------------------- */
-  ScrollTrigger.config({
-    limitCallbacks: true,
-    ignoreMobileResize: true
+    trigger: "footer", // or the element after journey-section
+    start: "top bottom",
+    onEnter: () => {
+      document.body.style.overflow = "auto";
+    }
   });
 });
 </script>
