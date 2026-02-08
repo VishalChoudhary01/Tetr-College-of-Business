@@ -12,6 +12,8 @@ import {initZoomOut} from './view/zoomOut.js'
 import {initRotateBack} from './animate/rotateBack.js'
 import {initMagneticReveal} from './animate/magneticReveal.js' 
 import {initCountUpNoComma} from './view/countNOComma.js'
+import {initHoverDisapper} from './hover/HoverDisapper.js'
+import {initRollingItemonHoverLetters} from './hover/rollingItemonHover.js'
 
 window.addEventListener("DOMContentLoaded",()=>{
     initSlideInLeftInView(),
@@ -27,6 +29,8 @@ window.addEventListener("DOMContentLoaded",()=>{
     initZoomOut(),
     initRotateBack(),
     initMagneticReveal(),
-    initCountUpNoComma()
+    initCountUpNoComma(),
+    initHoverDisapper(),
+    initRollingItemonHoverLetters()
 
 })
