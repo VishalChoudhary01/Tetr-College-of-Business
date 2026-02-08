@@ -152,6 +152,18 @@
     display: none;
 }
 
+.flap-3d {
+  perspective: 1200px;
+}
+
+.flap-3d img {
+  display: block;
+  transform-origin: top center; 
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
 
 @media (max-width:768px) {
 .hero-desktop{

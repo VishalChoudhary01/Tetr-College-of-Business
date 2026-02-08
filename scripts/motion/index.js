@@ -16,7 +16,7 @@ import {initHoverDisapper} from './hover/HoverDisapper.js'
 import {initRollingItemonHoverLetters} from './hover/rollingItemonHover.js'
 import {initRollUpOnView} from './view/rollUpOnView.js'
 import {initRollingItemOnViewLetters} from './view/initRollingItemOnViewLetters.js'
-
+import {initFlapFromTop} from './view/flapFromTop.js'
 window.addEventListener("DOMContentLoaded",()=>{
     initSlideInLeftInView(),
     initSlideInRightInView(),
@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded",()=>{
     initHoverDisapper(),
     initRollingItemonHoverLetters(),
     initRollUpOnView(),
-    initRollingItemOnViewLetters()
+    initRollingItemOnViewLetters(),
+    initFlapFromTop()
 
 })
