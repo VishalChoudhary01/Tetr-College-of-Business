@@ -10,16 +10,7 @@
 }
 
 
-.roll-up-view {
-  display: inline-block;
-  overflow: hidden;
-  line-height: 1;
-}
 
-.roll-up-view span {
-  display: inline-block;
-  will-change: transform;
-}
 
 .sticky-container {
   position: sticky;
