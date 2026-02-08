@@ -14,6 +14,7 @@ import {initMagneticReveal} from './animate/magneticReveal.js'
 import {initCountUpNoComma} from './view/countNOComma.js'
 import {initHoverDisapper} from './hover/HoverDisapper.js'
 import {initRollingItemonHoverLetters} from './hover/rollingItemonHover.js'
+import {initRollUpOnView} from './view/rollUpOnView.js'
 
 window.addEventListener("DOMContentLoaded",()=>{
     initSlideInLeftInView(),
@@ -31,6 +32,7 @@ window.addEventListener("DOMContentLoaded",()=>{
     initMagneticReveal(),
     initCountUpNoComma(),
     initHoverDisapper(),
-    initRollingItemonHoverLetters()
+    initRollingItemonHoverLetters(),
+    initRollUpOnView()
 
 })

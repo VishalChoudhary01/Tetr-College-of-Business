@@ -142,13 +142,12 @@
 
 .submit-btn {
   align-self: flex-end;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   background: var(--brand-secondary-one);
   color: var(--brand-primary-one);
   border: none;
   border-radius: 4px;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -159,6 +158,9 @@
   letter-spacing: 0.5px;
 }
 
+.submit-btn span{
+  transform: rotate(100deg);
+}
 .submit-btn:hover {
   background: #d9ab00;
   transform: translateY(-2px);
