@@ -29,6 +29,31 @@ body {
 
 
 
+::-webkit-scrollbar {
+  width: 7px;
+
+}
+
+/* Track – invisible */
+::-webkit-scrollbar-track {
+  background:#f0c40026 ;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(1, 93, 47, 0.748); 
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+cursor: pointer;
+}
+
+/* Hover – slightly stronger, still professional */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(1, 80, 41, 0.811);
+
+}
+
+
+
 
 
 
