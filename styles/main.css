@@ -11,6 +11,9 @@
 @import "./sections/journey-story.css";
 @import "./sections/contact.css";
 
+/* Animation */
+@import "./animations/dotAnimation.css";
+
 
 
 html,
