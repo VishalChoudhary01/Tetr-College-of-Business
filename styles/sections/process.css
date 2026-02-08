@@ -59,7 +59,6 @@
   max-width: 800px;
 }
 
-/* Apply Now Right angled Button  */
 .process-apply-btn {
   
   font-weight: 700;
@@ -308,6 +307,9 @@
     margin-top: 0;
   }
 
+  .process-title .roll-up-view{
+    text-wrap: nowrap;
+  }
   
   .right-angle-button {
     display: none;
@@ -330,6 +332,7 @@
     background: var(--brand-secondary-one);
     color: var(--brand-primary-one);
     padding: 12px 24px;
+    padding: 0.8rem 1.1rem;
     border-radius: 3px;
     font-weight: 700;
     font-size: 14px;

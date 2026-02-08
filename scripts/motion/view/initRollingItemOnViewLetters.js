@@ -34,7 +34,7 @@ export function initRollingItemOnViewLetters() {
           { y: [20, -12, 0] }, 
           {
             duration: 0.6,
-            delay: i * 0.05,
+            delay: i * 0.08,
             easing: "ease-out",
           }
         )

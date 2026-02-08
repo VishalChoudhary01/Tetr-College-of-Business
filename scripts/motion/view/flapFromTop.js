@@ -26,6 +26,7 @@ export function initFlapFromTop() {
         },
         {
           duration: 4,
+          delay:0.5,
           easing: "ease-out",
         }
       )

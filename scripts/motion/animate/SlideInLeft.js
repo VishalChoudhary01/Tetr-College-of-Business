@@ -24,7 +24,7 @@ export function initSlideInLeft() {
         animate(
           btn,
           { x: 0, opacity: 1 },
-          { duration: 0.6, easing: "ease-out" }
+          { duration: 0.6,delay:0.2, easing: "ease-out" }
         )
       },
       { once: true }

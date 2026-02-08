@@ -143,6 +143,7 @@
 .submit-btn {
   align-self: flex-end;
   padding: 1rem 1.5rem;
+
   background: var(--brand-secondary-one);
   color: var(--brand-primary-one);
   border: none;
@@ -298,6 +299,8 @@
     align-self: flex-end;
     width: auto;
     padding: 0.9rem 2.5rem;
+    padding: 0.7rem 1.4rem;
+
     font-size: 0.95rem;
     margin-top: 0.5rem;
   }

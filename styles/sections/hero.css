@@ -118,7 +118,7 @@
 }
 .bottom-container .content-cta button {
   border-radius: 3px;
-  padding: 1.2rem 1.4rem;
+  padding: 1.4rem 1.6rem;
   height: 36px;
   background: var(--brand-secondary-one);
   color: var(--text-primary);
@@ -169,6 +169,7 @@
 .hero-desktop{
     display: none;
 }
+
 
 .hero-mobile{
     display: block;
@@ -240,7 +241,7 @@
 
 .hero-mobile-cta button {
   border-radius: 3px;
-  padding: 0.5rem 0.8rem;
+  padding: 1.2rem 0.8rem;
   height: 36px;
   background: var(--brand-secondary-one);
   color: var(--text-primary);

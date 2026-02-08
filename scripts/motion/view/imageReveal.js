@@ -33,6 +33,7 @@ export function initImageReveal() {
           },
           {
             duration: 0.9,
+            delay:0.5,
             easing: "ease-out",
           }
         )
