@@ -1,55 +1,64 @@
-@keyframes appearAndPulse {
+@keyframes dotAppear {
   0% {
     opacity: 0;
     transform: scale(0);
   }
-  30% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  40%, 100% {
+  100% {
     opacity: 1;
     transform: scale(1);
   }
-  60% {
-    transform: scale(1.15);
+}
+
+/* Continuous pulsing animation */
+@keyframes continuousPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
 }
 
+/* For top dots - initial appear then continuous pulse */
 .process-dots-top span {
   opacity: 0;
-  animation: appearAndPulse 2s ease-in-out infinite;
+  animation: 
+    dotAppear 0.3s ease var(--delay, 0s) forwards,
+    continuousPulse 1.5s ease-in-out calc(var(--delay, 0s) + 0.3s) infinite;
 }
 
-/* Stagger with 0.1s interval between dots */
-.process-dots-top span:nth-child(1) { animation-delay: 0.1s; }
-.process-dots-top span:nth-child(2) { animation-delay: 0.2s; }
-.process-dots-top span:nth-child(3) { animation-delay: 0.3s; }
-.process-dots-top span:nth-child(4) { animation-delay: 0.4s; }
-.process-dots-top span:nth-child(5) { animation-delay: 0.5s; }
-.process-dots-top span:nth-child(6) { animation-delay: 0.6s; }
-.process-dots-top span:nth-child(7) { animation-delay: 0.7s; }
-.process-dots-top span:nth-child(8) { animation-delay: 0.8s; }
-.process-dots-top span:nth-child(9) { animation-delay: 0.9s; }
-.process-dots-top span:nth-child(10) { animation-delay: 1.0s; }
-.process-dots-top span:nth-child(11) { animation-delay: 1.1s; }
-.process-dots-top span:nth-child(12) { animation-delay: 1.2s; }
-.process-dots-top span:nth-child(13) { animation-delay: 1.3s; }
-.process-dots-top span:nth-child(14) { animation-delay: 1.4s; }
-.process-dots-top span:nth-child(15) { animation-delay: 1.5s; }
+/* Stagger the animation for each dot with CSS variables */
+.process-dots-top span:nth-child(1) { --delay: 0.1s; }
+.process-dots-top span:nth-child(2) { --delay: 0.2s; }
+.process-dots-top span:nth-child(3) { --delay: 0.3s; }
+.process-dots-top span:nth-child(4) { --delay: 0.4s; }
+.process-dots-top span:nth-child(5) { --delay: 0.5s; }
+.process-dots-top span:nth-child(6) { --delay: 0.6s; }
+.process-dots-top span:nth-child(7) { --delay: 0.7s; }
+.process-dots-top span:nth-child(8) { --delay: 0.8s; }
+.process-dots-top span:nth-child(9) { --delay: 0.9s; }
+.process-dots-top span:nth-child(10) { --delay: 1.0s; }
+.process-dots-top span:nth-child(11) { --delay: 1.1s; }
+.process-dots-top span:nth-child(12) { --delay: 1.2s; }
+.process-dots-top span:nth-child(13) { --delay: 1.3s; }
+.process-dots-top span:nth-child(14) { --delay: 1.4s; }
+.process-dots-top span:nth-child(15) { --delay: 1.5s; }
 
+/* For left dots */
 .process-dots-left span {
   opacity: 0;
-  animation: appearAndPulse 2s ease-in-out infinite;
+  animation: 
+    dotAppear 0.3s ease var(--delay, 0s) forwards,
+    continuousPulse 1.5s ease-in-out calc(var(--delay, 0s) + 0.3s) infinite;
 }
 
-.process-dots-left span:nth-child(1) { animation-delay: 1.6s; }
-.process-dots-left span:nth-child(2) { animation-delay: 1.7s; }
-.process-dots-left span:nth-child(3) { animation-delay: 1.8s; }
-.process-dots-left span:nth-child(4) { animation-delay: 1.9s; }
-.process-dots-left span:nth-child(5) { animation-delay: 2.0s; }
-.process-dots-left span:nth-child(6) { animation-delay: 2.1s; }
-.process-dots-left span:nth-child(7) { animation-delay: 2.2s; }
-.process-dots-left span:nth-child(8) { animation-delay: 2.3s; }
-.process-dots-left span:nth-child(9) { animation-delay: 2.4s; }
-.process-dots-left span:nth-child(10) { animation-delay: 2.5s; }
+.process-dots-left span:nth-child(1) { --delay: 1.6s; }
+.process-dots-left span:nth-child(2) { --delay: 1.7s; }
+.process-dots-left span:nth-child(3) { --delay: 1.8s; }
+.process-dots-left span:nth-child(4) { --delay: 1.9s; }
+.process-dots-left span:nth-child(5) { --delay: 2.0s; }
+.process-dots-left span:nth-child(6) { --delay: 2.1s; }
+.process-dots-left span:nth-child(7) { --delay: 2.2s; }
+.process-dots-left span:nth-child(8) { --delay: 2.3s; }
+.process-dots-left span:nth-child(9) { --delay: 2.4s; }
+.process-dots-left span:nth-child(10) { --delay: 2.5s; }
