@@ -132,7 +132,6 @@ nav .cta {
   visibility: visible;
 }
 
-/* Mobile Menu Styles - Professional Side Panel */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -355,7 +354,6 @@ nav .cta {
   color: var(--brand-secondary-one); 
 }
 
-/* Add underline effect on hover */
 .sub-nav-items li:not(:last-child) a:hover::after {
   content: "";
   position: absolute;
@@ -377,7 +375,6 @@ nav .cta {
   }
 }
 
-/* Special style for APPLY NOW button */
 .sub-nav-items .apply-btn {
   color: var(--brand-secondary-one); 
   border-radius: 3px;
@@ -405,7 +402,6 @@ nav .cta {
   transform: translate(5px, -2px);
 }
 
-/* Remove underline effect for APPLY NOW button */
 .sub-nav-items .apply-btn:hover::after {
   display: none;
 }

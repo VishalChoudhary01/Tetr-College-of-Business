@@ -10,6 +10,7 @@
 @import "./sections/challenges.css";
 @import "./sections/journey-story.css";
 @import "./sections/contact.css";
+@import "./layout/footer.css";
 
 /* Animation */
 @import "./animations/dotAnimation.css";
