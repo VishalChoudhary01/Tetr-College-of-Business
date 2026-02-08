@@ -1,61 +1,44 @@
-
 .journey-section {
-  background: var(--brand-primary-one);
+  height: calc(4 * 100vh); 
   position: relative;
-  overflow: hidden;
-  /* height: 300vh; */
-  /* height: auto;  */
+  background: var(--brand-primary-one);
 }
-
-
-
-/* .journey-scroll {
-  height: calc(100vh * 3); 
-} */
-
-
 
 .sticky-container {
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 300vw;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .track-container {
   display: flex;
-  width: 300vw; /* panels * 100 */
   height: 100vh;
-  will-change: transform;
+  width: max-content;
 }
 
-
-
-/* Ensure panels are visible by default */
 .panel-frame {
   width: 100vw;
   height: 100vh;
-  flex-shrink: 0;
+  flex: 0 0 100vw;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  opacity: 1; 
-  visibility: visible;
 }
+
 
 .panel-content {
   max-width: 1240px;
   width: 90%;
   position: relative;
   z-index: 2;
-  transform: translateY(0);
+  /* transform: translateY(0); */
   opacity: 1; 
   color: white;
-
 }
+
+
+
 
 /* LONDON STYLE */
 
@@ -101,11 +84,7 @@
   padding-top: 2rem;
 }
 
-/* .right-container .header-content p{
-  color: var(--lightest-gray);
-  font-size: 25px;
-  padding-bottom: 0.2rem;
-} */
+
 .right-image img{
   position: absolute;
   object-fit: contain;
@@ -188,47 +167,6 @@
 }
 
 
-/* .maxico-journey-connector {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  width: 500px;
-  gap: 12px;
-  margin-bottom: 2rem;
-  position: absolute;
-  top: 5%;
-  left: 90%;
-  z-index: -2;
-}
-
-.maxico-journey-connector .line {
-  flex: 1;
-  height: 2px;
-  width: 100px;
-  background: var(--brand-secondary-one);
-}
-.maxico-journey-connector .line:first-child {
-  flex: 1;
-  height: 2px;
-  width: 10px;
-  background: var(--brand-secondary-one);
-  background: red;
-}
-
-.maxico-journey-connector .node {
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--brand-secondary-one);
-  background: transparent;
-  flex-shrink: 0;
-}
-
-.maxico-journey-connector .label {
-  color: var(--text-primary-white);
-  font-weight: 600;
-  font-size: 22px;
-  white-space: nowrap;
-} */
 
 
 /* MEXICO STYLE */
@@ -373,17 +311,7 @@
 
 }
 
-/* small square at the edge */
-/* .mexico-connect-line-bottom::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;            
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--brand-secondary-one);
-  transform: translateX(-50%);
-} */
+
 
 /* EUROPE STYLE */
 .europe-container{
@@ -408,7 +336,6 @@
 .europe-image-wrapper-one{
   height: 468px;
   width: 100%;
-  /* display: inline-block; */
   position: relative;
 }
 

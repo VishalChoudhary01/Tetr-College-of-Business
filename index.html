@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tetr College of Business - Learn Business by Doing Business</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.umd.min.js"
@@ -435,7 +432,7 @@
 
         <!-- JOURNEY SECTION START -->
         <section class="journey-section">
-          <div class="journey-scroll">
+          <!-- <div class="journey-scroll"> -->
             <div class="sticky-container">
               <div class="track-container">
                 <!-- Panel 1: London -->
@@ -638,7 +635,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
         </section>
         <!-- JOURNEY SECTION END -->
 
@@ -749,42 +746,7 @@
     <script src="./scripts/core/toggleMenu.js"></script>
     <script src="./scripts/main.js"></script>
     <script type="module" src="./scripts/motion/index.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const section = document.querySelector(".journey-section");
-        const track = document.querySelector(".track-container");
-
-        if (!section || !track) return;
-
-        // Set section height to accommodate all panels
-        section.style.height = `${window.innerHeight * 3}px`; // Adjust based on panel count
-
-        // Animate horizontal movement based on vertical scroll
-        gsap.to(track, {
-          x: () => -(track.scrollWidth - window.innerWidth),
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.5,
-            pin: true,
-            markers: false,
-            invalidateOnRefresh: true,
-          },
-        });
-
-        // Ensure normal scroll works outside the section
-        ScrollTrigger.create({
-          trigger: "footer",
-          start: "top bottom",
-          onEnter: () => {
-            document.body.style.overflow = "auto";
-          },
-        });
-      });
-    </script>
+    <script type="module" src="./scripts/motion/scroll/journeyHorizontalScroll.js"></script>
+    
   </body>
 </html>
