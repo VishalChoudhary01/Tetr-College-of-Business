@@ -12,4 +12,5 @@
   --text-primary-white: #ffff;
   --text-primary: var(--gray-900);
   --text-secondary: var(--lightest-gray);
+  --grid-line:#435f4d50;
 }
