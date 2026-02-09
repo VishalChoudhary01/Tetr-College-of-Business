@@ -88,6 +88,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
 
 }
 
@@ -99,6 +100,7 @@ footer{
 
 .footer-cta button{
     padding: 0.6rem 1rem;
+    width: 85%;
     display: flex;
     justify-content: center;
     border-radius: 4px;
@@ -112,6 +114,7 @@ footer{
     gap: 0.4rem;
     transition: transform 4s ease-in;
     cursor: pointer;
+    border: none;
 
 }
 
@@ -192,10 +195,7 @@ footer{
   }
 }
 
-@keyframes barMove {
-  from { background-position: 0% 0; }
-  to   { background-position: 200% 0; }
-}
+
 
 /* social icon hover */
 .facebook {
