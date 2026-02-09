@@ -13,7 +13,7 @@ export function initZoomIn() {
     animate(
       target,
       {
-        scale: 0.9,
+        scale: 0.2,
         opacity: 0,
       },
       { duration: 0 }
@@ -30,7 +30,7 @@ export function initZoomIn() {
             opacity: 1,
           },
           {
-            duration: 0.8,
+            duration: 1.1,
             easing: "ease-out",
           }
         )

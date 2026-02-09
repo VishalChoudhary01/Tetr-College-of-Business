@@ -313,7 +313,7 @@ footer{
         width: 100%;
         max-width: 150px;
         height: auto;
-        aspect-ratio: 137/69; /* Maintain original aspect ratio */
+        aspect-ratio: 137/69; 
         margin: 0 auto;
     }
     
@@ -345,7 +345,7 @@ footer{
     .footer-menu ul {
         padding: 0;
         margin: 0;
-        width: calc(50% - 1rem); /* Two columns with gap */
+        width: calc(50% - 1rem);
         min-width: 150px;
     }
     
@@ -381,9 +381,9 @@ footer{
     }
     
     .footer-cta button {
-        width: 100%;
+        width: 50%;
         max-width: 250px;
-        padding: 0.8rem 1rem;
+        padding: 0.6rem 0.7rem;
         font-size: 0.95rem;
     }
     
